@@ -27,7 +27,11 @@ class Video(CMSPlugin):
     # lowercase of the class name of this model.
     # https://github.com/divio/django-cms/issues/5030
     cmsplugin_ptr = models.OneToOneField(
-        CMSPlugin, related_name='djangocms_video_video', parent_link=True)
+        CMSPlugin,
+        related_name='djangocms_video_video',
+        parent_link=True,
+        on_delete=models.CASCADE,
+    )
 
     # player settings
     movie = models.FileField(
