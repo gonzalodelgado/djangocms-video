@@ -15,7 +15,8 @@ except ImportError:
         for information
         """
         return instance.get_media_path(filename)
-from cms.utils.compat.dj import python_2_unicode_compatible
+from six import python_2_unicode_compatible
+
 
 from . import settings
 
